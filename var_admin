@@ -1,0 +1,18 @@
+<html>
+<head>
+
+<title>
+<meta charset="UTF-8">
+
+</title>
+</head>
+<body>
+<script>
+var admin;
+var name;
+name="Василий";
+admin=name;
+alert(admin);
+</script>
+</body>
+</html>
