@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+var num;
+function IsInteger(num){
+	//Внимание приоритеты!
+//if (num==num ^ 0)//нет скобок 
+if(num==(num ^ 0))
+	{
+	return true;}
+else  {return false;}
+
+}
+console.log(IsInteger(1));
+console.log(IsInteger(1.5));
+console.log(IsInteger(-0.5));
+</script>
+</body>
+</html>
