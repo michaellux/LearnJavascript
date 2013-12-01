@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<script>
+var question =prompt('Кто пришёл?',""); //! ""
+if (question === "Админ") 
+{
+var pass = prompt('Пароль?',"");//! ""
+ if (pass==="Чёрный Властелин") {
+
+alert("Добро пожаловать!");
+
+}
+else if (pass===null){
+	alert("Вход отменён");
+}
+else alert("Пароль неверен");
+}
+else if (question===null) 
+	{alert("Вход отменён");}
+
+else 
+	alert("Я вас не знаю");
+</script>
+</body>
+</html>
