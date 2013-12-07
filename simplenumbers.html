@@ -10,16 +10,13 @@ var p=" на ";
 var p1=" нет остатка"
 var w="делится"
 var q="?"
-tt:
-for(;;)
-{
-	
-	break;
-}
 
+t:
+{
 for(n=a;n<=b;n++)
 {
-	
+console.log("BREAK");	
+
 for(m=a;m<=b;m++)
 {console.log("Проверочное число:" +n +w +p +m +q);
 
@@ -28,7 +25,8 @@ if(n==m)
     if(n%m==0)
 	{
 console.log("не простое число:" +n);
-break tt;
+n++;
+break t;
 	}
 
 
@@ -36,9 +34,10 @@ break tt;
 console.log("Простое число " +n);
 
 }
+}
 
 
-
+console.log("Сработал break");
 
 </script>
 </body>
