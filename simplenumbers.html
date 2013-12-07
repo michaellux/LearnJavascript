@@ -19,31 +19,30 @@ for(n=a;n<=b;n++)
 
 for(m=a;m<=b;m++)
 {
-	console.log("Проверочное число:" +n +w +p +m +q);
+	//console.log("Проверочное число:" +n +w +p +m +q);
 
 if(n==m)
 	{continue;}
     if(n%m==0)
 	{
-console.log("не простое число:" +n);break;
+console.log("не простое число:" +n);break; //!!! нельзя убирать console.log иначе не будет работать.
 	}
 
 if(m==b)
 {
 console.log("Простое число " +n);
-
 }
 
 
 
 }
 continue;
-//console.log("Простое число " +n);
+
 }
 
 
 
-console.log("Сработал break");
+
 
 </script>
 </body>
