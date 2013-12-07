@@ -5,7 +5,7 @@
 </head>
 <body>
 <script>
-var a=2,b=20,n,m;
+var a=2,b=50,n,m;
 var p=" на ";
 var p1=" нет остатка"
 var w="делится"
@@ -40,8 +40,23 @@ continue;
 
 }
 
+/*
+Решение
+1. Не знал, что метки можно применять не только в break, но и в continue 
+2. В книге Дэвида Флэнагана не написано про метки либо я не нашёл
+3. Жаль что в javascript нет goto
+4. Возможно не до конца разобрался с console.log
+написать текст с числами в одну строчку
 
+nextPrime:
+for(var i=2; i<10; i++) {
+for(var j=2; j<i; j++) {
+if ( i % j == 0) continue nextPrime;
+}
 
+  alert(i);  // простое
+}
+*/
 
 
 </script>
