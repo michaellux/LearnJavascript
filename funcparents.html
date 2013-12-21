@@ -5,11 +5,24 @@
 </head>
 <body>
 <script>   
-function checkage(age){
-age>18 ? return true : return confirm('Родители разрешили?');
+/*function checkage(age){
+var age;
+//age>18 ? alert (true) : confirm('Родители разрешили?');
+//age = (age>18)  || confirm('Родители разрешили?');
+
+console.log(age);
+}*/
+
+//Решение
+/*
+function checkAge(age) {
+  return (age > 18) ? true : confirm('Родители разрешили?');
 }
+function checkAge(age) {
+  return (age > 18) || confirm('Родители разрешили?');
+}*/
+
+checkage(17);
 </script>
-
-
 </body>
 </html>
