@@ -6,6 +6,7 @@
 <body>
 <script>
 var n;
+/*
 function sumTo(n)
 {
 	var sum=n;
@@ -18,8 +19,17 @@ sum=i+sum;
 return sum;
 
 }
+*/
+function sumTo(n)
+{
+var sum=n;
+sum+=sumTo(n);
+return sum;
+}
 
-alert(sumTo(100));
+
+
+alert(sumTo(10));
 
 </script>
 </body>
