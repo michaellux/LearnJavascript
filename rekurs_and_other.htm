@@ -5,6 +5,9 @@
 </head>
 <body>
 <script>
+
+
+
 var n;
 /*
 function sumTo(n)
@@ -20,14 +23,19 @@ return sum;
 
 }
 */
-/*
-function sumTo(n)
-{
-var sum=n;
-sum+=sumTo(n);
-return sum;
-}
-*/
+
+ function sumTo(n)
+
+ {
+
+ var sum=n;
+
+ sum+=sumTo(n);
+
+ return sum;
+
+ }
+
 /*
 function sumTo(n)
 {
@@ -39,7 +47,10 @@ sum+=((1+n)/2)*n;
 return sum;
 }
 */
-alert(sumTo(100));
+
+
+
+alert(sumTo(4));
 
 </script>
 </body>

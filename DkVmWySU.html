@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Bu-bench-ik</title>
+	<script type="text/javascript">
+		var benchIt = function() {
+
+			var st = new Date();
+
+			var forceFeedback = true;
+
+			var iterationCount = 500;
+			var containerNode = document.getElementById( "container" );
+			var resultNode = document.getElementById( "result" );
+			var containerWidth = containerNode.clientWidth;
+			var tplNodes = [];
+			for ( var i=0; i<5; i++ ) tplNodes[ i ] = document.getElementById( "tpl" + ( i + 1 ) );
+
+			containerNode.innerHTML = "";
+			resultNode.innerHTML = "";
+
+			for ( var i=iterationCount; i--; ) {
+				var rndIndex = Math.round( Math.random() * 4 );
+				var tmpNode = tplNodes[ rndIndex ];
+				var cloneNode = tmpNode.cloneNode( true );
+				containerNode.appendChild( cloneNode );
+				cloneNode.id = "";
+
+				if ( forceFeedback ) {
+					var prevNode = cloneNode.previousSibling;
+					if( prevNode ) {
+						var prevX = prevNode.offsetLeft;
+						var prevY = prevNode.offsetTop;
+						var cloneY = cloneNode.offsetTop;
+
+						if ( prevY != cloneY ) {
+							prevNode.style.width = ( endX - prevX - 47 ) + "px";
+						}
+					}
+					else
+					{
+						var endX = $getFullOffsetLeft( cloneNode ) + containerWidth;
+					}
+				}
+			}
+
+			var et = new Date();
+			resultNode.innerHTML = et - st;
+		};
+
+		var $getFullOffsetLeft = function( node ) {
+			try {
+
+				var nodeLeft = node.offsetLeft;
+				var nodeParentOffset = node.offsetParent;
+
+				while ( nodeParentOffset ) {
+
+					if ( nodeParentOffset.currentStyle ) {
+						if ( nodeParentOffset.currentStyle.position != "relative" ) nodeLeft += nodeParentOffset.offsetLeft;
+					}
+					else
+					{
+						nodeLeft += nodeParentOffset.offsetLeft;
+					}
+
+					nodeParentOffset = nodeParentOffset.offsetParent;
+				}	
+
+				return nodeLeft;
+
+			} catch ( e ) { return 0; }
+		}
+	</script>
+	<style type="text/css">
+		body { font: normal 11pt tahoma; margin: 20px; padding: 0px; }
+		#container { border: 2px solid #ccc; background: #f2f2f2; margin: 10px 0px; min-height: 1em; width: 500px; overflow: hidden; }
+		.tpl1, .tpl2, .tpl3, .tpl4, .tpl5 { float: left; display: none; border: 1px solid #999; background: #ccc; padding: 10px 20px; margin: 0px 5px 5px 0px; }
+		#container .tpl1, #container .tpl2, #container .tpl3, #container .tpl4, #container .tpl5 { display: block; }
+		.tpl1 { font-size: 18pt; }
+		.tpl2 { font: bold 8pt tahoma; }
+		.tpl4 { font-size: 24pt; }
+		.tpl5 { font: bold 7pt tahoma; padding: 3px 20px; }
+	</style>
+
+
+</head>
+<body>
+	<a href="#" onclick="benchIt(); return false;">BENCH!</a>
+	<div id="result"></div>
+	<div id="container"></div>
+	<div id="tpl1" class="tpl1">Test 1</div></div>
+	<div id="tpl2" class="tpl2">One two three...</div></div>
+	<div id="tpl3" class="tpl3">And justice for all...</div></div>
+	<div id="tpl4" class="tpl4">o_O</div></div>
+	<div id="tpl5" class="tpl5">Habr</div></div>
+
+</body>
+</html>
