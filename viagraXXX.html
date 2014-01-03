@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>  </title>
+</head>
+<body>
+<script>
+function checkSpam(str)
+{
+	str=str.toLowerCase();
+if( ~str.indexOf("viagra") || ~str.indexOf("xxx"))
+
+{return true;}
+
+else 
+
+	return false;
+
+}
+
+alert(checkSpam("innocent rabbit"));
+
+/*Решение
+function checkSpam(str) {
+  str = str.toLowerCase();
+        
+  return str.indexOf('viagra') >= 0 || str.indexOf('xxx') >= 0;
+}
+*/
+
+
+</script>
+</body>
+</html>
