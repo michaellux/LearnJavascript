@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<script>
+/*Крайние значения встречаются реже
+var min =5;
+var max = 10;
+var res = Math.random()*max ;
+var res_=Math.round(res);
+alert(res_ );*/
+/*
+
+Сам не догадался 
+
+Правильный способ: Math.round(случайное от min-0.5 до max+0.5)
+
+   
+var min = 1, max = 3;
+ 
+var rand = min - 0.5 + Math.random()*(max-min+1)
+rand = Math.round(rand);
+ 
+alert(rand);
+
+В этом случае диапазон будет тот же (max-min+1), но учтена механика округления round.
+*/
+/*
+ Решение с floor
+
+Альтернативный путь - применить округление Math.floor() к случайному числу от min до max+1.
+
+Например, для генерации целого числа от 1 до 3, создадим вспомогательное случайное значение от 1 до 4 (не включая 4).
+
+Тогда Math.floor() округлит их так:
+1 ... 1.999+ станет 1
+2 ... 2.999+ станет 2
+3 ... 3.999+ станет 3
+
+Все диапазоны одинаковы.
+Итак, код:
+
+   
+var min=5, max=10;
+var rand = min + Math.random()*(max+1-min);
+rand = rand^0; // округление битовым оператором
+alert(rand);
+
+
+
+
+
+*/
+</script>
+</body>
+</html>

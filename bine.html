@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title> </title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<script>
+alert(fib(77));
+function fib(n)
+{
+
+var phi=Math.pow(((1+Math.sqrt(5))/2),n);
+var phi_=Math.pow(((1-Math.sqrt(5))/2),n);
+	
+	return (phi-phi_)/Math.sqrt(5);
+}
+/*Решение
+function fib(n) {
+  var phi = (1 + Math.sqrt(5)) / 2;
+  return Math.round( Math.pow(phi, n) / Math.sqrt(5) );
+}
+ 
+alert( fib(2) ); // 1, верно
+alert( fib(8) ); // 21, верно
+alert( fib(77)); // 5527939700884755 != 5527939700884757, неверно
+*/
+
+</script>
+</body>
+</html>
