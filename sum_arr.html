@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script>
+var sum=0;
+var arr=[];
+while(true)
+{
+arr=prompt("Введите число","");	
+
+if(arr==null || arr=="")
+{break;}
+sum=sum + +arr;
+}
+alert(sum);
+alert(arr);
+
+/*Решение
+var numbers = [];
+
+while(true) {
+
+  var value = +prompt("Введите число", '');
+
+  if (!value) break; // '', NaN или null (отмена)
+
+  numbers.push(value);
+}
+
+var sum = 0;
+for(var i=0; i<numbers.length; i++) {
+  sum += numbers[i];
+}
+
+alert(sum);
+
+
+
+*/
+
+</script>
+</body>
+</html>

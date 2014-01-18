@@ -1,0 +1,61 @@
+<html>
+<head>
+
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<script>
+
+//до вызова
+var rect={
+width:200,
+height:34,
+colour:"yellow"
+};
+function multiplyNumeric(obj){
+for(var key in rect){
+if (isNumeric(rect[key]))
+{
+	rect[key]=rect[key]*2;
+}
+}
+}
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+alert( rect.toSource() );
+multiplyNumeric(rect);
+alert( rect.toSource() );
+/*Решение
+var menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+ 
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+ 
+function multiplyNumeric(obj) {
+  for(var key in obj) {
+    if (isNumeric( obj[key] )) {
+      obj[key] *= 2;
+    }
+  }
+}
+ 
+multiplyNumeric(menu);
+ 
+alert("menu width="+menu.width+" height="+menu.height+" title="+menu.title);
+
+
+
+
+
+*/
+
+</script>
+</body>
+</html>
