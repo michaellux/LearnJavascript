@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script>
+function obrsort(a,b)
+{
+if(a>b) return -1;
+if(a<b) return 1;
+}
+var arr=[5,2,1,-10,8];
+
+arr.sort(obrsort);
+alert(arr);
+
+/*Решение
+var arr = [ 5, 2, 1, -10, 8];
+ 
+function compareReversed(a, b) {
+  return b - a;
+}
+ 
+arr.sort(compareReversed);
+ 
+alert(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+var obj={
+
+	className:'open menu'
+}
+function removeClass(obj,cls)
+{
+	var classes=obj.className ? obj.className.split(' '): [];//!!! помни о пробеле в split
+
+for(var i=0;i<classes.length;i++)
+{
+if (classes[i]==cls)
+{
+var removed=classes.splice(0,i+1);	
+alert("Удалили " +removed)
+
+}
+obj.className = classes.join(' ');
+return classes;
+
+}
+	
+}
+alert(removeClass(obj,'menu'));
+//Недоделано
+/*Решение с пояснением
+
+
+/////////////////////////////////////////////////////////
+Решение заключается в том, чтобы разбить className в массив классов, а затем пройтись по нему циклом. Если класс есть - удаляем его splice, заново объединяем массив в строку и присваиваем объекту.
+//////////////////////////////////////////////////////////
+
+   
+function removeClass(obj, cls) {
+  var classes = obj.className.split(' ');
+  
+  for(i=0; i<classes.length; i++) {
+    if (classes[i] == cls) {
+      classes.splice(i, 1); // удалить класс 
+      i--; // (*)
+    }
+  }
+  obj.className = classes.join(' ');
+     
+}
+ 
+var obj = { className: 'open menu menu' }
+ 
+removeClass(obj, 'blabla');
+removeClass(obj, 'menu')
+alert(obj.className)   // open
+
+При выполнении задания не учёл этот самый тонкий момент
+
+В примере выше есть тонкий момент. Элементы массива проверяются один за другим. При вызове splice удаляется текущий, i-й элемент, и те элементы, которые идут дальше, сдвигаются на его место.
+
+Таким образом, на месте i оказывается новый, непроверенный элемент.
+
+Чтобы это учесть, строчка (*) уменьшает i, чтобы следующая итерация цикла заново проверила элемент с номером i. Без нее функция будет работать с ошибками.
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+</script>
+</body>
+</html>

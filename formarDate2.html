@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>   </title>
+</head>
+<body>
+<script>
+function formatDate(date)
+{
+var now=new Date();
+if((date/1000)<1)
+{return "только что";}
+else if((date/0.0000167)<1)
+		{return (now-date)/1000 +"секунд назад";}
+		else if((date/2.778)<1)
+			{return (now-date)/0.0000167 +"минут назад";}
+			else{
+
+ var dd = date.getDate()
+  if ( dd < 10 ) dd = '0' + dd;
+ 
+  var mm = date.getMonth()+1
+  if ( mm < 10 ) mm = '0' + mm;
+ 
+  var yy = date.getFullYear() % 100;
+  if ( yy < 10 ) yy = '0' + yy;
+
+var hh = date.getHours()
+  if ( hh < 10 ) hh = '0' + hh;
+
+var mn = date.getHours()
+  if ( mn < 10 ) mn = '0' + mn;
+
+				return dd+'.'+mm+'.'+yy +" " +hh +":" +mn;
+
+			}
+
+}
+/*Не сделал*/
+</script>
+</body>
+</html>
