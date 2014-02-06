@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>Fontsize</title>
+	<script type="text/javascript">
+
+
+function fontSize()
+{
+	var n=0;
+var stylesize=document.body.style.fontSize;
+var bodysize=document.body.attributes.style.value; /*Получили значение аттрибута style*/
+document.body.style.fontSize="10"+n;
+n+=10;
+alert(stylesize);
+}
+	</script>
+	<meta charset="UTF-8">
+</head>
+<body style="font-size:200%;">
+
+<button type="button" onclick="fontSize()">Увеличить</button>
+<button type="button" onclick="">Уменьшить</button>
+
+
+	<hr>
+<h1 style="font-size:90%">Заголовок</h1>
+<p style="font-size:70%;">Информация большим шрифтом<br>
+<p style="font-size:40%;">Информация мелким шрифтом</p></p>
+<p style="font-size:50%;">Все элементы должны менять размер шрифта при изменении font-size у BODY</p>
+<!-- Пока только начал разбираться в DOM
+	Не догадался вставить параметры в функцию
+
+
+
+Работающее решение
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="font-size:100%">
+ 
+<script>
+  function scale(multi) {
+    var s = document.body.style;
+    s.fontSize = parseInt(s.fontSize)*multi + '%';
+  }
+</script>
+<button onclick="scale(1.25)">Увеличить &uarr;</button>
+<button onclick="scale(0.8)">Уменьшить &darr;</button>
+<hr>
+ 
+<h2>Заголовок</h2>
+ 
+<div style="font-size:125%">Информация большим шрифтом</div>
+<div style="font-size:70%">Информация мелким шрифтом</div>
+ 
+<p>Все элементы должны менять размер шрифта при изменении font-size у BODY.</p>
+ 
+</body>
+</html>
+По умолчанию, BODY в браузере имеет font-size:16px. Здесь он поставлен в 100% для удобства работы функции scale.
+
+Внутренние элементы имеют размеры шрифта в em/%, поэтому автоматически масштабируются.
+
+
+
+
+
+
+
+-->
+
+
+
+</body>
+</html>
