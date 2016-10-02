@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        //Решение
+        //function isInteger(num) {
+        //    return (num ^ 0) === num;
+        //}
+
+        //alert(isInteger(1)); // true
+        //alert(isInteger(1.5)); // false
+        //alert(isInteger(-0.5)); // false
+
+
+        var num;
+        function IsInteger(num) {
+            //Внимание приоритеты!
+            //if (num==num ^ 0)//нет скобок
+            if (num == (num ^ 0))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        console.log(IsInteger(1));
+        console.log(IsInteger(1.5));
+        console.log(IsInteger(-0.5));
+    </script>
+</body>
+</html>
+
