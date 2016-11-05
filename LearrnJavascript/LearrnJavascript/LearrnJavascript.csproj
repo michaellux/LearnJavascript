@@ -99,6 +99,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Pages\Part1\test.js" />
+    <Content Include="Pages\Part1\test2.js" />
     <Content Include="Pages\Part1\[Качество кода]%28Сделать pow по спецификации%29.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Вычислить сумму чисел до данного%29rekurs%28and other%29.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Вычислить сумму чисел до данного%29rekurs_and_other.html" />
@@ -137,6 +138,7 @@
     <Content Include="Pages\Part1\[Циклы while, for]%28Вывести простые числа%29simplenumbers.html" />
     <Content Include="Pages\Part1\[Циклы while, for]%28Замените for на while%29forwhile.html" />
     <Content Include="Pages\Part1\[Циклы while, for]%28Повторять цикл, пока ввод неверен%29promptfor.html" />
+    <Content Include="Pages\Part1\[Качество кода]Добавьте тест к задаче.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
