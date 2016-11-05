@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="test.js"></script>
+</head>
+<body>
+    <script>
+
+    /* исправьте этот код */
+        function pow(x, n) {
+            console.log(n);
+
+
+            if (n < 0) { return NaN; }
+            
+            p = n * 10;
+
+            if (p % 10 != 0)
+            {
+                return NaN;
+            }
+
+
+            var result = 1;
+            for (var i = 0; i < n; i++) {
+                result *= x;
+            }
+
+            return result;
+        }
+        pow(2,-3.477);
+    </script>
+</body>
+</html>

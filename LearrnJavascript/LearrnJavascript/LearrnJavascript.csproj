@@ -98,6 +98,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pages\Part1\test.js" />
+    <Content Include="Pages\Part1\[Качество кода]%28Сделать pow по спецификации%29.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Вычислить сумму чисел до данного%29rekurs%28and other%29.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Вычислить сумму чисел до данного%29rekurs_and_other.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Вычислить факториал%29factorial_rekurs.html" />
