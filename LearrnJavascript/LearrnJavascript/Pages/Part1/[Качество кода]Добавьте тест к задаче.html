@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="test2.js"></script>
+</head>
+
+<body>
+    <script>
+
+        function pow(x, n) {
+            if (n < 0) {
+                return NaN;
+            }
+
+            if ((x == 0) && (n == 0))
+            {
+                return NaN;
+            }
+            //else if ((x != 0) && (n == 0))
+            //{
+            //    return 1;
+            //}
+
+            if (Math.round(n) != n) return NaN;
+
+            var result = 1;
+            for (var i = 0; i < n; i++) {
+                result *= x;
+            }
+            return result;
+        }
+
+   
+
+
+    </script>
+</body>
+</html>
+</body>
+</html>
