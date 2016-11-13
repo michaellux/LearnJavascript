@@ -16,17 +16,12 @@ var res = Math.random()*max ;
 alert(res );
 
 /*Решение
+Сгенерируем значение из интервала 0..max-min, а затем сдвинем на min:
 
-Сгенерируем значение в диапазоне 0..1 и умножим на max:
+var min = 5,
+  max = 10;
 
-   
-var max = 10;
- 
-alert( Math.random()*max );
-
-
-
-
+alert( min + Math.random() * (max - min) );
 */
 </script>
 </body>

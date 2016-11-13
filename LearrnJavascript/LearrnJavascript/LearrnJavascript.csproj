@@ -139,6 +139,12 @@
     <Content Include="Pages\Part1\[Циклы while, for]%28Замените for на while%29forwhile.html" />
     <Content Include="Pages\Part1\[Циклы while, for]%28Повторять цикл, пока ввод неверен%29promptfor.html" />
     <Content Include="Pages\Part1\[Качество кода]Добавьте тест к задаче.html" />
+    <Content Include="Pages\Part1\[Числа]%28Интерфейс суммы%29sum.html" />
+    <Content Include="Pages\Part1\[Числа]%28Как получить  дробную часть числа%29decimal.html" />
+    <Content Include="Pages\Part1\[Числа]%28Случайное из интервала %280, max%29%29rand.html" />
+    <Content Include="Pages\Part1\[Числа]%28Случайное целое от min до max%29rand+.html" />
+    <Content Include="Pages\Part1\[Числа]%28Формула Бине%29bine.html" />
+    <Content Include="Pages\Part1\[Числа]Случайное из интервала %28min, max%29.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
