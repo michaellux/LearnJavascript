@@ -16,7 +16,8 @@ else
 	return false;
 
 }
-
+alert( checkSpam('buy ViAgRA now') );
+alert( checkSpam('free xxxxx') );
 alert(checkSpam("innocent rabbit"));
 
 /*Решение
@@ -26,6 +27,25 @@ function checkSpam(str) {
   return str.indexOf('viagra') >= 0 || str.indexOf('xxx') >= 0;
 }
 */
+
+    /*Новое решение
+    
+    function checkSpam(str) {
+  var lowerStr = str.toLowerCase();
+
+  return !!(~lowerStr.indexOf('viagra') || ~lowerStr.indexOf('xxx'));
+}
+
+alert( checkSpam('buy ViAgRA now') );
+alert( checkSpam('free xxxxx') );
+alert( checkSpam("innocent rabbit") );
+    
+    
+    
+    
+    
+    */
+
 
 
 </script>

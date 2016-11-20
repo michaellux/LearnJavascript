@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        function extractCurrencyValue(str) {
+            var newStr = "";
+            for (i = 0; i < str.length; i++) {
+                if (!isNaN(str[i])) {
+                    newStr = newStr + str[i];
+                }
+            }
+            //alert(newStr);
+            return parseFloat(newStr);
+
+        }
+        extractCurrencyValue("$120");
+
+        ////Решение 
+        //function extractCurrencyValue(str) {
+        //    return +str.slice(1);
+        //}
+
+    </script>
+</body>
+</html>

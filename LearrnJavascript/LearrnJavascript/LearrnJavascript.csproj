@@ -98,13 +98,33 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pages\Part1\[Массивы методы]%28Перевести текст вида border-left-width в borderLeftWidth%29camelize_aud.html" />
+    <Content Include="Pages\Part1\[Массивы методы]{Тесты пройдены}%28Добавить класс в строку%29addClassName.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами%28Фильтр диапазона%29{Тесты пройдены}filterRange.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты пройдены}%28Подмассив наибольшей суммы%29getMaxSubSum.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты не пройдены}%28Поиск в массиве%29find_arr.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Получить последний элемент массива%29goods.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Получить случайное значение из массива%29rand_arr.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Создайте калькулятор для введённых значений%29sum_arr.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Создание массива%29musicstyles.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Добавить новый элемент в массив%29addlastelem.html" />
+    <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Решето Эратосфена%29eratosfen.html" />
+    <Content Include="Pages\Part1\[Объекты как ассоциативные массивы]{Тесты отсутствуют}Первый объект.html" />
     <Content Include="Pages\Part1\test.js" />
     <Content Include="Pages\Part1\test2.js" />
     <Content Include="Pages\Part1\[Качество кода]%28Сделать pow по спецификации%29.html" />
+    <Content Include="Pages\Part1\[Объекты перебор свойств]{Тесты отсутствуют}%28Свойство с наибольшим значением%29.html" />
+    <Content Include="Pages\Part1\[Объекты перебор свойств]{Тесты отсутствуют}%28Сумма свойств%29.html" />
+    <Content Include="Pages\Part1\[Объекты перебор свойств]{Тесты пройдены}%28Определите, пуст ли объект%29.html" />
+    <Content Include="Pages\Part1\[Объекты перебор свойств]{Тесты пройдены}%28Умножьте численные свойства на 2%29 multiplyNumeric.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Вычислить сумму чисел до данного%29rekurs%28and other%29.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Вычислить сумму чисел до данного%29rekurs_and_other.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Вычислить факториал%29factorial_rekurs.html" />
     <Content Include="Pages\Part1\[Рекурсия, стек]%28Числа Фибоначчи%29fibbonachi.html" />
+    <Content Include="Pages\Part1\[Строки]{Тесты пройдены}%28Выделить число%29.html" />
+    <Content Include="Pages\Part1\[Строки]{Тесты пройдены}%28Проверьте спам%29viagraXXX.html" />
+    <Content Include="Pages\Part1\[Строки]{Тесты пройдены}%28Сделать первый символ заглавным%29string.html" />
+    <Content Include="Pages\Part1\[Строки]%28Усечение строки%29truncate.html" />
     <Content Include="Pages\Part1\[Функции]%28Перепишите функцию, используя оператор ...%29.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

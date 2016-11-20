@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        "use strict";
+
+        var salaries = {
+            "Вася": 100,
+            "Петя": 300,
+            "Даша": 250
+        };
+        var maxValue = 0;
+        var res = "Нет сотрудников";
+        for (var key in salaries)
+        {
+            if(salaries[key]> maxValue)
+            {
+                maxValue = salaries[key];
+                res = key;
+            }
+        }
+        alert(res);
+        //Решение
+
+        //"use strict";
+
+        //var salaries = {
+        //    "Вася": 100,
+        //    "Петя": 300,
+        //    "Даша": 250
+        //};
+
+        //var max = 0;
+        //var maxName = "";
+        //for (var name in salaries) {
+        //    if (max < salaries[name]) {
+        //        max = salaries[name];
+        //        maxName = name;
+        //    }
+        //}
+
+        //alert(maxName || "нет сотрудников");
+
+    </script>
+</body>
+</html>
