@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
 	<meta charset="UTF-8">
 	<title></title>
@@ -6,19 +6,18 @@
 <body>
 <script>
 var arr=["test",2,1.5,false];
-function find(arr,value)
-{
-for (var i = 0; i< arr.length; i++) 
-{
 
-if(arr[i]==value)
-{alert(i);m;}
+function find(arr, value) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == value) {
+            return (i);
+        }
+
+    }
+    return (-1);
 
 }
-alert("-1");
 
-}
-m:
 
 find(arr,0);//выдаёт как false;
 /*Решение

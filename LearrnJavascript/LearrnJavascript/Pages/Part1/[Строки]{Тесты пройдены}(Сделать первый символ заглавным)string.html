@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+<title></title>>
+<meta charset="UTF-8">
+</head>
+<body>
+<script>
+alert(ucFirst("марципаны"));
+function ucFirst(str)
+{
+	var str_old=str;
+	var str_new=str_old.charAt(0).toUpperCase();
+	console.log(str_new);
+for(var i=1;i<str_old.length;i++)
+{
+str_new+=str_old.charAt(i);
+console.log(str_new);
+}
+
+return str_new;
+
+}
+
+    /*Решение
+    
+    Мы не можем просто заменить первый символ, т.к. строки в JavaScript неизменяемы.
+
+Но можно пересоздать строку на основе существующей, с заглавным первым символом:
+
+var newStr = str[0].toUpperCase() + str.slice(1);
+
+Однако, есть небольшая проблемка – в случае, когда строка пуста, будет ошибка.
+
+Ведь str[0] == undefined, а у undefined нет метода toUpperCase().
+
+Выхода два. Первый – использовать str.charAt(0), он всегда возвращает строку, для пустой строки – пустую, но не undefined. Второй – отдельно проверить на пустую строку, вот так:
+
+function ucFirst(str) {
+  // только пустая строка в логическом контексте даст false
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+alert( ucFirst("вася") );
+
+P.S. Возможны и более короткие решения, использующие методы для работы со строками, которые мы пройдём далее.
+    
+    
+    */
+
+
+</script>
+</body>
+</html>
