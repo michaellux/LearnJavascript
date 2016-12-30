@@ -98,7 +98,14 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Pages\Part1\[Массивы методы]%28Перевести текст вида border-left-width в borderLeftWidth%29camelize_aud.html" />
+    <Content Include="Pages\Part1\[Массивы методы]%28Тесты отсутствуют%29%28Скопировать и отсортировать массив%29arrSorted.html" />
+    <Content Include="Pages\Part1\[Массивы методы]%28Тесты отсутствуют%29%28Случайный порядок в массиве%29randomSort.html" />
+    <Content Include="Pages\Part1\[Массивы методы]%28Тесты отсутствуют%29%28Сортировать в обратном порядке%29обратная сортировка.html" />
+    <Content Include="Pages\Part1\[Массивы методы]%28Тесты отсутствуют%29%28Сортировка объектов%29[Не сделал]sortPeopleAge.html" />
+    <Content Include="Pages\Part1\[Массивы методы]%28Тесты отсутствуют%29[Не сделал]%28Вывести односвязный список%29reverse.html" />
+    <Content Include="Pages\Part1\[Массивы методы]%28Тесты пройдены%29%28Перевести текст вида border-left-width в borderLeftWidth%29camelize_aud.html" />
+    <Content Include="Pages\Part1\[Массивы методы]%28Тесты не пройдены. Понадобилась подсказка%29%28Функция removeClass%29removeClass.html" />
+    <Content Include="Pages\Part1\[Массивы методы]%28Тесты пройдены%29%28Фильтрация массива %27на месте%27%29filterRangeInPlace.html" />
     <Content Include="Pages\Part1\[Массивы методы]{Тесты пройдены}%28Добавить класс в строку%29addClassName.html" />
     <Content Include="Pages\Part1\[Массивы с числовыми индексами%28Фильтр диапазона%29{Тесты пройдены}filterRange.html" />
     <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты пройдены}%28Подмассив наибольшей суммы%29getMaxSubSum.html" />
