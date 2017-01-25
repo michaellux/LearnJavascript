@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+
+        //Не доделано и слишком сложное получилось
+
+        var curarr = ["воз", "киборг", "корсет", "ЗОВ", "гробик", "костер", "сектор"];
+        
+        var finishArr = [];
+
+        
+        
+        function aclean(curarr)
+        {
+            var arr = [];
+            for (pos = 0; pos < curarr.length;pos++)
+            {
+             
+                arr.push(curarr[pos].toString().toLowerCase());
+            }
+
+            console.log(arr);
+
+            for (var wordpos1 = 0; wordpos1 < arr.length; wordpos1++) {  
+                
+               // var currentword1 = arr[wordpos1].toLowerCase(); //Берём первое слово
+                
+                for (var wordpos2 = 0; wordpos2 < arr.length; wordpos2++) {
+                    
+                    if(wordpos2 == wordpos1) // если берём то же слово
+                    {
+                        //console.log(wordpos1 + " " + wordpos2);
+                        continue;
+                    }
+                    
+                    if (arr[wordpos1].length == arr[wordpos2].length){ // если совпадают длина
+
+                        for (var letterpos = 0; letterpos < arr[wordpos1].length; letterpos++) {
+                            
+                            var stringword = arr[wordpos1].toString();
+                            console.log((arr[wordpos2].toString()).indexOf(stringword[letterpos]) != -1);
+                            console.log("Слово: " + arr[wordpos1].toString() + "Символ:" + stringword[letterpos]);
+                            if((arr[wordpos2].toString()).indexOf(stringword[letterpos])!=-1)
+                            {
+                                var good = true;
+                                
+                                console.log("Слово1 " + arr[wordpos1] + " " + "Слово2 " + arr[wordpos2]);
+                            }
+                            else {
+
+                                good = false;
+                                //console.log("Слово1 " + arr[wordpos1] + " " + "Слово2 " + arr[wordpos2]);
+
+                            }
+                        } // проверили совпадают буквы
+
+                        if (good)
+                        {
+                            console.log("Слово1 " + arr[wordpos1] + " " + "Слово2 " + arr[wordpos2]);
+                           arr.splice( arr.indexOf(arr[wordpos1]) , 1);
+
+                            if (finishArr.indexOf(arr[wordpos1]) == -1) {
+                                finishArr.push(arr[wordpos1]);
+                            }
+                        }
+
+
+                    }
+
+
+                }
+
+            }
+                console.log(finishArr);
+                return finishArr;
+        }
+        aclean(curarr);
+
+        //Не доделано 
+
+        //Решение
+
+        
+
+        //Чтобы обнаружить анаграммы, разобьём каждое слово на буквы и отсортируем их. В отсортированном по буквам виде все анаграммы одинаковы.
+
+        //    Например:
+
+        //воз, зов -> взо
+        //киборг, гробик -> бгикор
+        //...
+
+        //По такой последовательности будем делать массив уникальным.
+
+        //Для этого воспользуемся вспомогательным объектом, в который будем записывать слова по отсортированному ключу:
+
+
+
+
+
+
+
+
+        //function aclean(arr) {
+        //    // этот объект будем использовать для уникальности
+        //    var obj = {};
+
+        //    for (var i = 0; i < arr.length; i++) {
+        //        // разбить строку на буквы, отсортировать и слить обратно
+        //        var sorted = arr[i].toLowerCase().split('').sort().join(''); // (*)
+
+        //        obj[sorted] = arr[i]; // сохраняет только одно значение с таким ключом
+        //    }
+
+        //    var result = [];
+
+        //    // теперь в obj находится для каждого ключа ровно одно значение
+        //    for (var key in obj) result.push(obj[key]);
+
+        //    return result;
+        //}
+
+        //var arr = ["воз", "киборг", "корсет", "ЗОВ", "гробик", "костер", "сектор"];
+
+        //alert( aclean(arr) );
+
+        //Приведение слова к сортированному по буквам виду осуществляется цепочкой вызовов в строке (*).
+
+        //Для удобства комментирования разобьём её на несколько строк (JavaScript это позволяет):
+
+        //var sorted = arr[i] // ЗОВ
+        //  .toLowerCase() // зов
+        //  .split('') // ['з','о','в']
+        //  .sort() // ['в','з','о']
+        //  .join(''); // взо
+
+        //Получится, что два разных слова 'ЗОВ' и 'воз' получат одинаковую отсортированную форму 'взо'.
+
+        //Следующая строка:
+
+        //obj[sorted] = arr[i];
+
+        //В объект obj будет записано сначала первое из слов obj['взо'] = "воз", а затем obj['взо'] = 'ЗОВ'.
+
+        //Обратите внимание, ключ – отсортирован, а само слово – в исходной форме, чтобы можно было потом получить его из объекта.
+
+        //Вторая запись по тому же ключу перезапишет первую, то есть в объекте останется ровно одно слово с таким набором букв.
+
+    
+
+
+
+    </script>
+</body>
+</html>
