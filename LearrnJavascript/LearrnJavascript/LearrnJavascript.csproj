@@ -98,6 +98,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pages\Part1\[Массивы методы]%28Решение недокрутил%29%28Отфильтровать анаграммы%29.html" />
     <Content Include="Pages\Part1\[Массивы методы]%28Тесты отсутствуют%29%28Скопировать и отсортировать массив%29arrSorted.html" />
     <Content Include="Pages\Part1\[Массивы методы]%28Тесты отсутствуют%29%28Случайный порядок в массиве%29randomSort.html" />
     <Content Include="Pages\Part1\[Массивы методы]%28Тесты отсутствуют%29%28Сортировать в обратном порядке%29обратная сортировка.html" />
