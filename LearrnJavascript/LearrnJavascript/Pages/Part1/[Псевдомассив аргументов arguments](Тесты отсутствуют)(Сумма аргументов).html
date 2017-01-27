@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        var total = 0;
+        function sum()
+        {
+            //console.log(arguments.length);
+            for (number = 0; number < arguments.length; number++) {
+                //неправильно (т.к. это частный случай) total = total + 1;
+                total += arguments[number];
+            }
+            console.log(total);
+            return total;
+        }
+        sum();
+        sum(1);
+        sum(1, 2);
+        sum(1, 2, 3);
+        sum(1, 2, 3, 4);
+
+        //Решение
+
+        //function sum() {
+        //    var result = 0;
+
+        //    for (var i = 0; i < arguments.length; i++) {
+        //        result += arguments[i];
+        //    }
+
+        //    return result;
+        //}
+
+        //alert(sum()); // 0
+        //alert(sum(1)); // 1
+        //alert(sum(1, 2)); // 3
+        //alert(sum(1, 2, 3)); // 6
+        //alert(sum(1, 2, 3, 4)); // 10
+
+    </script>
+</body>
+</html>
