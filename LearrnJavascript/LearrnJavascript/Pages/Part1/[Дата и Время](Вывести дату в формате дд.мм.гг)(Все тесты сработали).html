@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+		var d = new Date(2014, 0, 30); // 30 января 2014
+		function formatDate(date)
+		{
+			var stringDate = date.toString();
+			console.log(stringDate);
+            console.log(typeof(stringDate));
+            var elements = stringDate.split(" ");
+            console.log(elements);
+            var finalFormatDate = "";
+            var month = "";
+            switch(elements[1])
+        {
+            case "Jan": month = "01"; break;
+            case "Feb": month = "02"; break;
+            case "Mar": month = "03"; break;
+            case "Apr": month = "04"; break;
+            case "May": month = "05"; break;
+            case "Jun": month = "06"; break;
+            case "Jul": month = "07"; break;
+            case "Aug": month = "08"; break;
+            case "Sep": month = "09"; break;
+            case "Oct": month = "10"; break;
+            case "Nov": month = "11"; break;
+            case "Dec": month = "12"; break;
+        }
+            var year = (elements[3].toString()).charAt(2) +
+                        (elements[3].toString()).charAt(3);
+
+            finalFormatDate = elements[2] + "." + month + "." + year;
+            console.log(finalFormatDate);
+            return(finalFormatDate);
+
+		}
+		formatDate(d);
+
+        /*Решение*/
+
+      /*  Получим компоненты один за другим.
+
+    День можно получить как date.getDate(). При необходимости добавим ведущий ноль:
+
+    var dd = date.getDate();
+    if (dd < 10) dd = '0' + dd;
+
+date.getMonth() возвратит месяц, начиная с нуля. Увеличим его на 1:
+
+var mm = date.getMonth() + 1; // месяц 1-12
+if (mm < 10) mm = '0' + mm;
+
+date.getFullYear() вернет год в 4-значном формате. Чтобы сделать его двузначным – воспользуемся оператором взятия остатка '%':
+
+var yy = date.getFullYear() % 100;
+if (yy < 10) yy = '0' + yy;
+
+    Заметим, что год, как и другие компоненты, может понадобиться дополнить нулем слева, причем возможно что yy == 0 (например, 2000 год). При сложении со строкой 0+'0' == '00', так что будет все в порядке.
+
+Полный код:
+
+function formatDate(date) {
+
+  var dd = date.getDate();
+  if (dd < 10) dd = '0' + dd;
+
+  var mm = date.getMonth() + 1;
+  if (mm < 10) mm = '0' + mm;
+
+  var yy = date.getFullYear() % 100;
+  if (yy < 10) yy = '0' + yy;
+
+  return dd + '.' + mm + '.' + yy;
+}
+
+var d = new Date(2014, 0, 30); // 30 Янв 2014
+alert( formatDate(d) ); // '30.01.14' */
+
+
+
+
+	</script>
+</body>
+</html>

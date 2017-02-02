@@ -98,6 +98,14 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pages\Part1\[Дата и Время]%28День недели в европейской нумерации%29%28решение подсмотрено%29%28тесты пройдены%29getLocalDay.html" />
+    <Content Include="Pages\Part1\[Дата и Время]%28Относительное форматирование даты%29%28Тесты пройдены%29.html" />
+    <Content Include="Pages\Part1\[Дата и время]%28Последний день месяца%29%28Решение усложнил и недокрутил%29.html" />
+    <Content Include="Pages\Part1\[Дата и Время]%28Сколько секунд - до завтра%29%28Тесты отсутствуют%29.html" />
+    <Content Include="Pages\Part1\[Дата и Время]%28Сколько секунд уже прошло сегодня%29%28Решение недокрутил%29%28Тесты отсутствуют%29.html" />
+    <Content Include="Pages\Part1\[Дата и Время]%28Тесты пройдены%29%28День указанное количество дней назад%29.html" />
+    <Content Include="Pages\Part1\[Дата и Время]%28Имя дня недели%29%28Тесты пройдены%29getWeekDay.html" />
+    <Content Include="Pages\Part1\[Дата и Время]%28тесты отсутствуют%29%28Создайте дату%29Date.html" />
     <Content Include="Pages\Part1\[Массив перебирающие методы]%28Тесты пройдены%29%28Массив частичных сумм%29.html" />
     <Content Include="Pages\Part1\[Массив перебирающие методы]%28Тесты отсутствуют%29%28Перепишите цикл через map%29.html" />
     <Content Include="Pages\Part1\[Массивы методы]%28Тесты пройдены%29%28Оставить уникальные элементы массива%29.html" />
@@ -139,6 +147,7 @@
     <Content Include="Pages\Part1\[Строки]{Тесты пройдены}%28Сделать первый символ заглавным%29string.html" />
     <Content Include="Pages\Part1\[Строки]%28Усечение строки%29truncate.html" />
     <Content Include="Pages\Part1\[Функции]%28Перепишите функцию, используя оператор ...%29.html" />
+    <Content Include="Pages\Part1\[Дата и Время]%28Вывести дату в формате дд.мм.гг%29%28Все тесты сработали%29.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
