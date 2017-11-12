@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var users = [{
+            name: "Вася",
+            surname: 'Иванов',
+            age: 20
+        }, {
+            name: "Петя",
+            surname: 'Чапаев',
+            age: 25
+        }, {
+            name: "Маша",
+            surname: 'Медведева',
+            age: 18
+        }];
+        // по полю name (Вася, Маша, Петя)
+        //users.sort(function (a, b) {
+        //    return a.name > b.name ? 1 : -1;
+        //});
+
+        //// по полю age  (Маша, Вася, Петя)
+        //users.sort(function (a, b) {
+        //    return a.age > b.age ? 1 : -1;
+        //});
+
+        
+
+        function byField(field) {
+            return function f(a, b) {
+                return a.field > b.field ? 1 : -1
+            }
+
+            return f();
+        }
+
+
+        users.sort(byField('name'));
+        users.forEach(function (user) {
+            alert(user.name);
+            console.log(user.name);
+        }); // Вася, Маша, Петя
+        users.sort(byField('age'));
+        users.forEach(function (user) {
+            alert(user.name);
+            console.log(user.name);
+        }); // Маша, Вася, Петя
+
+        //Решение
+
+        //var users = [{
+        //    name: "Вася",
+        //    surname: 'Иванов',
+        //    age: 20
+        //}, {
+        //    name: "Петя",
+        //    surname: 'Чапаев',
+        //    age: 25
+        //}, {
+        //    name: "Маша",
+        //    surname: 'Медведева',
+        //    age: 18
+        //}];
+
+        //function byField(field) {
+        //    return function (a, b) {
+        //        return a[field] > b[field] ? 1 : -1;
+        //    }
+        //}
+
+        //users.sort(byField('name'));
+        //users.forEach(function (user) {
+        //    alert(user.name);
+        //});
+
+        //users.sort(byField('age'));
+        //users.forEach(function (user) {
+        //    alert(user.name);
+        //});
+
+
+    </script>
+</body>
+</html>
