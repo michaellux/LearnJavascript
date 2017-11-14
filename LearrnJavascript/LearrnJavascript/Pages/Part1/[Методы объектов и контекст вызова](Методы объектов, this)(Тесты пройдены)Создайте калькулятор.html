@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var calculator = {
+            read: function () {
+                var firstValue = prompt("Введите значение 1: ");
+                calculator.firstValue = parseInt(firstValue);
+                var secondValue = prompt("Введите значение 2: ");
+                calculator.secondValue = parseInt(secondValue);
+            },
+
+            sum: function () {
+                console.log(typeof (calculator.firstValue + calculator.secondValue));
+                return calculator.firstValue + calculator.secondValue;
+            },
+            mul: function () {
+                console.log(typeof(calculator.firstValue * calculator.secondValue));
+                return calculator.firstValue * calculator.secondValue;
+            }
+            
+}
+        calculator.read();
+        console.log(typeof (calculator.sum()));
+        alert(calculator.sum());
+        console.log(typeof (calculator.mul()));
+        alert(calculator.mul());
+
+        //Решение 
+        //var calculator = {
+        //    sum: function () {
+        //        return this.a + this.b;
+        //    },
+
+        //    mul: function () {
+        //        return this.a * this.b;
+        //    },
+
+        //    read: function () {
+        //        this.a = +prompt('a?', 0);
+        //        this.b = +prompt('b?', 0);
+        //    }
+        //}
+
+        //calculator.read();
+        //alert(calculator.sum());
+        //alert(calculator.mul());
+
+
+    </script>
+</body>
+</html>

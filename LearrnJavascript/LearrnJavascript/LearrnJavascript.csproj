@@ -135,6 +135,8 @@
     <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Создание массива%29musicstyles.html" />
     <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Добавить новый элемент в массив%29addlastelem.html" />
     <Content Include="Pages\Part1\[Массивы с числовыми индексами]{Тесты отсутствуют}%28Решето Эратосфена%29eratosfen.html" />
+    <Content Include="Pages\Part1\[Методы объектов и контекст вызова]%28Методы объектов, this%29%28Тесты пройдены%29Создайте калькулятор.html" />
+    <Content Include="Pages\Part1\[Методы объектов и контекст вызова]%28Тестов нет%29%28С решением почти совпадает%29%28Методы объектов, this%29Цепочка вызовов.html" />
     <Content Include="Pages\Part1\[Объекты как ассоциативные массивы]{Тесты отсутствуют}Первый объект.html" />
     <Content Include="Pages\Part1\test.js" />
     <Content Include="Pages\Part1\test2.js" />
