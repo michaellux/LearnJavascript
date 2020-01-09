@@ -1,64 +1,56 @@
 <html>
+
 <head>
 	<title> </title>
 	<meta charset="UTF-8">
 </head>
+
 <body>
-<script>
-var a=2,b=50,n,m;
-var p=" на ";
-var p1=" нет остатка"
-var w="делится"
-var q="?"
+	<script>
+		let a = 2, b = 50, n, m;
+		let p = " на ";
+		let p1 = " нет остатка"
+		let w = "делится"
+		let q = "?"
+
+		for (n = a; n <= b; n++) {
 
 
+			for (m = a; m <= b; m++) {
+				//console.log("Проверочное число:" +n +w +p +m +q);
 
-for(n=a;n<=b;n++)
-{
+				if (n == m) { continue; }
+				if (n % m == 0) {
+					console.log("не простое число:" + n); break; //!!! нельзя убирать console.log иначе не будет работать.
+				}
 
+				if (m == b) {
+					console.log("Простое число " + n);
+				}
+			}
+			continue;
+		}
 
-for(m=a;m<=b;m++)
-{
-	//console.log("Проверочное число:" +n +w +p +m +q);
+		/*Решение
+		1. Не знал, что метки можно применять не только в break, но и в continue
+		2. В книге Дэвида Флэнагана не написано про метки либо я не нашёл
+		3. Жаль что в javascript нет goto
+		4. Возможно не до конца разобрался с console.log
+		написать текст с числами в одну строчку
+		
+		let n = 10;
 
-if(n==m)
-	{continue;}
-    if(n%m==0)
-	{
-console.log("не простое число:" +n);break; //!!! нельзя убирать console.log иначе не будет работать.
-	}
+		nextPrime:
+		for (let i = 2; i <= n; i++) { // Для всех i...
 
-if(m==b)
-{
-console.log("Простое число " +n);
-}
+  		  for (let j = 2; j < i; j++) { // проверить, делится ли число..
+            if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+          }
 
-
-
-}
-continue;
-
-}
-
-/*
-Решение
-1. Не знал, что метки можно применять не только в break, но и в continue 
-2. В книге Дэвида Флэнагана не написано про метки либо я не нашёл
-3. Жаль что в javascript нет goto
-4. Возможно не до конца разобрался с console.log
-написать текст с числами в одну строчку
-
-nextPrime:
-for(var i=2; i<10; i++) {
-for(var j=2; j<i; j++) {
-if ( i % j == 0) continue nextPrime;
-}
-
-  alert(i);  // простое
-}
-*/
-
-
-</script>
+          alert( i ); // простое число
+        }
+		*/
+	</script>
 </body>
+
 </html>
