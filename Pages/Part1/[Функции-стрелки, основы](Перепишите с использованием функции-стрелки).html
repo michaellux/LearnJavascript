@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Перепишите с использованием функции-стрелки</title>
+</head>
+
+<body>
+    <script>
+        let ask = (question, yes, no) =>
+        {
+            if (confirm(question)) yes()
+            else no();
+        };
+
+        ask(
+            "Вы согласны?",
+            yes = () => { alert("Вы согласились."); },
+            no = () => { alert("Вы отменили выполнение."); }
+        );
+
+        /*Решение:
+        function ask(question, yes, no) {
+          if (confirm(question)) yes()
+          else no();
+        }
+      
+        ask(
+          "Вы согласны?",
+          () => alert("Вы согласились."),
+          () => alert("Вы отменили выполнение.")
+        );
+        */
+    </script>
+</body>
+
+</html>
