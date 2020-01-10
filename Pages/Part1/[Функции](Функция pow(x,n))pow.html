@@ -1,80 +1,66 @@
 <html>
+
 <head>
-	<title>  </title>
-	<meta charset="UTF-8">
+  <title>Функция pow(x,n)</title>
+  <meta charset="UTF-8">
 </head>
+
 <body>
-<script charset="utf-8" async defer>
-	var x,n;
-	
-function pow(x,n)
-{
-var res;
-if(x==null || n==null)
-{
-return alert("Вы пропустили ввод числа! ");
-}
+  <script charset="utf-8" async defer>
+    let x, n;
 
-if(parseFloat(n).toFixed(0)==n)
-{
-console.log(parseFloat(n).toFixed(0));
-console.log(n);
+    function pow(x, n) {
+      let res;
+      if (x == null || n == null) {
+        return alert("Вы пропустили ввод числа! ");
+      }
 
-var for_n;
-res=x;
-for(for_n=1;for_n<n;for_n++)
-{
-res*=x;
+      if (parseFloat(n).toFixed(0) == n) {
+        console.log(parseFloat(n).toFixed(0));
+        console.log(n);
 
-}
-return alert(res);
-}
-else 
-{
-//Почему-то нельзя использовать n.tofixed(0)
-//пришлось использовать parseFloat(n).toFixed(0)  
-// Решение проблемы нашёл на http://stackoverflow.com/questions/4937251/why-is-my-tofixed-function-not-working
-console.log(parseFloat(n).toFixed(0));
-console.log(n);
-return alert("Нецелое значение  n! Введите целое число");
+        let for_n;
+        res = x;
+        for (for_n = 1; for_n < n; for_n++) {
+          res *= x;
 
-}
+        }
+        return alert(res);
+      }
+      else {
+        //Почему-то нельзя использовать n.tofixed(0)
+        //пришлось использовать parseFloat(n).toFixed(0)  
+        // Решение проблемы нашёл на http://stackoverflow.com/questions/4937251/why-is-my-tofixed-function-not-working
+        console.log(parseFloat(n).toFixed(0));
+        console.log(n);
+        return alert("Нецелое значение  n! Введите целое число");
 
-}
-pow(prompt("x?",""),prompt("n?",""));
-/*Решение учебника:
-/**
-   * Возводит x в степень n (комментарий JSDoc)
-   *
-   * @param {number} x число, которое возводится в степень
-   * @param {number} n степень, должна быть целым числом больше 1
-   *
-   * @return {number} x в степени n
-   *
-  function pow(x, n) {
-    var result = x;
+      }
 
-    for(var i = 1; i < n; i++) {
-      result *= x;
     }
-
-    return result;
-  }
-  
-  var x = prompt("x?", '');
-  var n = prompt("n?", '');
-
-  if (n <= 1) {
-    alert('Степень ' + n +
-      'не поддерживается, введите целую степень, большую 1'
-    );
-  } else {
-    alert( pow(x, n) );
-  }
-*/
-
-
-
-</script>
+    pow(prompt("x?", ""), prompt("n?", ""));
+    
+    /*Решение:
+    function pow(x, n) {
+      let result = x;
+    
+      for (let i = 1; i < n; i++) {
+        result *= x;
+      }
+    
+      return result;
+    }
+    
+    let x = prompt("x?", '');
+    let n = prompt("n?", '');
+    
+    if (n < 1) {
+      alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+    } else {
+      alert( pow(x, n) );
+    }
+    */
+  </script>
 </body>
+
 </html>
