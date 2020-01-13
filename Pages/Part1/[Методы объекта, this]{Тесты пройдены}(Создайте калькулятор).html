@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Создайте калькулятор</title>
+</head>
+
+<body>
+    <script>
+        let calculator = {
+            read: function (firstValue, secondValue) {
+                calculator.firstValue = prompt("Введите первое значение", 0);
+                calculator.secondValue = prompt("Введите второе значение", 0);
+            },
+            sum: function () {
+                return +this.firstValue + +this.secondValue;
+            },
+            mul: function () {
+                return this.firstValue * this.secondValue;
+            }
+        };
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+
+        /*Решение
+        let calculator = {
+            sum() {
+                return this.a + this.b;
+            },
+
+            mul() {
+                return this.a * this.b;
+            },
+
+            read() {
+                this.a = +prompt('a?', 0);
+                this.b = +prompt('b?', 0);
+            }
+        };
+
+        calculator.read();
+        alert( calculator.sum() );
+        alert( calculator.mul() );
+        */
+    </script>
+</body>
+
+</html>
