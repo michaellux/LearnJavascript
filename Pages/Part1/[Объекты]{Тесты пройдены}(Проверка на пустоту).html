@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Проверка на пустоту</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        function isEmpty(obj) {
+
+            for (let key in obj) {
+                if (key in obj) {
+                    return false
+                }
+            }
+            return true;
+        }
+        /*Решение
+        function isEmpty(obj) {
+            for (let key in obj) {
+                // если тело цикла начнет выполняться - значит в объекте есть свойства
+                return false;
+            }
+            return true;
+        }
+        */
+    </script>
+</body>
+
+</html>

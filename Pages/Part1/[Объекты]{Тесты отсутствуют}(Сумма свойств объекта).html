@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Сумма свойств объекта</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        };
+        let sum = 0;
+        for (let key in salaries) {
+            sum = sum + salaries[key];
+        }
+        alert(sum);
+
+        /*Решение
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        };
+
+        let sum = 0;
+        for (let key in salaries) {
+            sum += salaries[key];
+        }
+
+        alert(sum); // 390
+        */
+    </script>
+</body>
+
+</html>
