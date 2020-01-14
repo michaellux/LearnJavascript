@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Создание калькулятора при помощи конструктора</title>
+</head>
+
+<body>
+    <script>
+        function Calculator() {
+            this.read = function() {
+                this.firstValue = +prompt("Введите первое значение", 0);
+                this.secondValue = +prompt("Введите второе значение", 0);
+            };
+            this.sum = function() {
+                console.log(typeof(+this.firstValue + +this.secondValue));
+                return +this.firstValue + +this.secondValue;
+            };
+            this.mul = function() {
+                console.log(typeof (this.firstValue * this.secondValue));
+                return this.firstValue * this.secondValue;
+            };
+        }
+
+        let calculator = new Calculator();
+        calculator.read();
+
+        alert("Sum=" + calculator.sum());
+        alert("Mul=" + calculator.mul());
+
+        /* Решение
+        
+        Поставил this.read, this.sum и this.mul, a this.firstValue и this.secondvalue - нет.
+        Поэтому моё решение не проходило тесты.
+
+        function Calculator() {
+
+            this.read = function() {
+                this.a = +prompt('a?', 0);
+                this.b = +prompt('b?', 0);
+            };
+
+            this.sum = function() {
+                return this.a + this.b;
+            };
+
+            this.mul = function() {
+                return this.a * this.b;
+            };
+        }
+
+        let calculator = new Calculator();
+        calculator.read();
+
+        alert( "Sum=" + calculator.sum() );
+        alert( "Mul=" + calculator.mul() );
+        */
+    </script>
+</body>
+
+</html>
