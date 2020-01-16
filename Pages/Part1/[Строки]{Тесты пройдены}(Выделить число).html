@@ -7,7 +7,7 @@
 <body>
     <script>
         function extractCurrencyValue(str) {
-            var newStr = "";
+            let newStr = "";
             for (i = 0; i < str.length; i++) {
                 if (!isNaN(str[i])) {
                     newStr = newStr + str[i];
@@ -19,11 +19,11 @@
         }
         extractCurrencyValue("$120");
 
-        ////Решение 
-        //function extractCurrencyValue(str) {
-        //    return +str.slice(1);
-        //}
-
+        /* Решение
+        function extractCurrencyValue(str) {
+            return +str.slice(1);
+        }
+        */
     </script>
 </body>
 </html>
