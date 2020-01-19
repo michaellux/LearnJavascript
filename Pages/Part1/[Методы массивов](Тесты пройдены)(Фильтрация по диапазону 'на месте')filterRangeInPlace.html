@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Фильтрация по диапазону "на месте"</title>
+  </head>
+  <body>
+    <script>
+      let arr = [5, 3, 8, 1];
+
+      function filterRangeInPlace(arr, a, b) {
+        for (let i = 0; i < arr.length; i++) {
+          if (a >= arr[i] && b <= arr[i]) {
+            continue;
+          } else {
+            arr.splice(i, 1);
+            console.log(arr);
+          }
+        }
+      }
+      filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+
+      alert( arr ); // [3, 1]
+      /*Решение
+      
+      function filterRangeInPlace(arr, a, b) {
+
+        for (let i = 0; i < arr.length; i++) {
+            let val = arr[i];
+
+            // удалить, если за пределами интервала
+            if (val < a || val > b) {
+            arr.splice(i, 1);
+            i--;
+            }
+        }
+
+      }
+
+      let arr = [5, 3, 8, 1];
+  
+      filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+  
+      alert( arr ); // [3, 1]
+
+      */
+    </script>
+  </body>
+</html>

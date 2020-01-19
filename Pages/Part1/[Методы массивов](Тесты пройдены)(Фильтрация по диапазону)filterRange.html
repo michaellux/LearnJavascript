@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Фильтрация по диапазону</title>
+  </head>
+  <body>
+    <script>
+      let arr = [5, 3, 8, 1];
+
+      function filterRange(arr, a, b) {
+        let filteredArr = [];
+        filteredArr = arr.map(item => item);
+        for (let i = 0; i < filteredArr.length; i++) {
+          if (a >= filteredArr[i] && b <= filteredArr[i]) {
+            continue;
+          } else {
+            filteredArr.splice(i, 1);
+            console.log(filteredArr);
+          }
+        }
+        return filteredArr;
+      }
+      let filtered = filterRange(arr, 1, 4);
+
+      alert(filtered); // 3,1 (совпадающие значения)
+
+      alert(arr); // 5,3,8,1 (без изменений)
+      /*Решение
+
+      Решение с filter начинал, но "недокрутил". 
+      Необходима практика в написании стрелочных функций
+
+      function filterRange(arr, a, b) {
+      // добавлены скобки вокруг выражения для улучшения читабельности
+      return arr.filter(item => (a <= item && item <= b));
+      }  
+      let arr = [5, 3, 8, 1];  
+      let filtered = filterRange(arr, 1, 4);  
+      alert( filtered ); // 3,1 (совпадающие значения)  
+      alert( arr ); // 5,3,8,1 (без изменений)
+
+      */
+    </script>
+  </body>
+</html>
