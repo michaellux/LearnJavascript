@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Создать расширяемый калькулятор</title>
+  </head>
+  <body>
+    <script>
+    let calc = new Calculator;
+    
+    function Calculator() {
+
+        this.operators = ["+","-"];
+
+        this.functions = [(a, b) => a + b, (a, b) => a - b];
+
+        this.calculate = function(inputStr) {
+            let operator = null;
+            this.operators.forEach(item => {
+                if(inputStr.indexOf(item) != -1) {
+                    operator = item;
+                }
+            });
+            
+            let resFunction = null;
+            this.functions.forEach(item => {
+               if(item.toString().indexOf(operator) != -1) {
+                   resFunction = item;
+                   console.log(typeof resFunction);
+               }
+            });
+
+            let argumentsArr = inputStr.split(operator);
+
+            console.log(typeof resFunction);
+            return resFunction(+argumentsArr[0], +argumentsArr[1]);
+        };
+
+        this.addMethod = function(name, func) {
+            this.operators.push(name);
+            this.functions.push(func);
+        }
+    }
+    
+    alert( calc.calculate("3 + 7") ); // 10
+
+    let powerCalc = new Calculator;
+    powerCalc.addMethod("*", (a, b) => a * b);
+    powerCalc.addMethod("/", (a, b) => a / b);
+    powerCalc.addMethod("**", (a, b) => a ** b);
+
+    let result = powerCalc.calculate("2 ** 3");
+    alert( result ); // 8
+
+    /* Решение
+
+    Обратите внимание, как хранятся методы. Они просто добавляются к внутреннему объекту.
+    Все тесты и числовые преобразования выполняются в методе calculate. В будущем он может быть расширен для поддержки более сложных выражений.
+    function Calculator() {
+
+    this.methods = {
+        "-": (a, b) => a - b,
+        "+": (a, b) => a + b
+    };
+
+    this.calculate = function(str) {
+
+        let split = str.split(' '),
+        a = +split[0],
+        op = split[1],
+        b = +split[2]
+
+        if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+        return NaN;
+        }
+
+        return this.methods[op](a, b);
+    }
+
+    this.addMethod = function(name, func) {
+        this.methods[name] = func;
+    };
+    }
+    */
+    </script>
+  </body>
+</html>
