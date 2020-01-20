@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Сортировать в порядке по убыванию</title>
+  </head>
+  <body>
+    <script>
+      let arr = [5, 2, 1, -10, 8];
+
+      function reverseSort(a, b) {
+        if (a > b) return -1;
+        if (a < b) return 1;
+      }
+
+      arr.sort(reverseSort);
+
+      alert(arr); // 8, 5, 2, 1, -10
+
+      /* Решение
+      let arr = [5, 2, 1, -10, 8];
+
+	    arr.sort((a, b) => b - a);
+
+      alert( arr );
+	    */
+    </script>
+  </body>
+</html>
