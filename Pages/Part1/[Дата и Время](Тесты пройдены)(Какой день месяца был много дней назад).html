@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Какой день месяца был много дней назад?</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+     
+      function getDateAgo(date, days) {
+        let dif = new Date(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate() - days
+        );
+        let lastday = dif.getDate();
+        console.log(lastday);
+        return lastday;
+      }
+      let date = new Date(2015, 0, 2);
+
+      alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+      alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+      alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+  
+      /* Решение
+      
+      Идея проста: нужно вычесть заданное количество дней из date:
+
+      function getDateAgo(date, days) {
+          date.setDate(date.getDate() - days);
+          return date.getDate();
+      }
+      …Но функция не должна изменять объект date. Это очень важно, поскольку внешний код, передающий нам объект, не ожидает его изменения.  
+      Это можно осуществить путём клонирования даты:  
+      function getDateAgo(date, days) {
+          let dateCopy = new Date(date);  
+          dateCopy.setDate(date.getDate() - days);
+          return dateCopy.getDate();
+      }  
+      let date = new Date(2015, 0, 2);  
+      alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+      alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+      alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+        
+      */
+    </script>
+  </body>
+</html>
