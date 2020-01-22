@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Отфильтруйте анаграммы</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+
+        function aclean(arr) {
+
+            // Узнаём длины всех слов. Создаём набор значений длинн.
+            let setOfLengths = new Set();
+
+            for(let word of arr) {
+                setOfLengths.add(word.length);
+            }
+
+            console.log(setOfLengths);
+
+            // Создаём набор из наборов слов разной длинны.
+            let setOfSetsWordSortedByLength = new Set();
+
+            for(currentsetOfLengthsIndex = 0; currentsetOfLengthsIndex < setOfLengths.size; currentsetOfLengthsIndex++) {
+
+                let setOfWord = new Set();
+
+                for(let word of arr) {
+                    if(word.length == Array.from(setOfLengths)[currentsetOfLengthsIndex]) {
+                        setOfWord.add(word);
+                    }
+                }
+                setOfSetsWordSortedByLength.add(setOfWord);
+                console.log(setOfSetsWordSortedByLength);
+                setOfWord = null;
+            }
+
+
+            for (let setOfWords of setOfSetsWordSortedByLength) {
+                for(let word of setOfWords) {
+                    console.log(setOfWords);
+
+                    for (let letterPos = 0; letterPos <= word.length; letterPos++) {
+                        
+                        for(let anotherwords of setOfWords) {
+                            if(word != anotherwords) {
+                                while(letterPos <= word.length)
+                                    if(anotherwords.indexOf(word[letterPos]) != -1) {
+                                        letterPos++;
+                                        continue;
+                                    }
+                                    else {
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+
+        let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+        alert( aclean(arr) ); // "nap,teachers,ear" or "PAN,cheaters,era"
+    </script>
+  </body>
+</html>
