@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Фильтрация уникальных элементов массива</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+
+        function unique(arr) {
+            let finishSet = new Set();
+            for (let value of arr) {
+                if (!finishSet.has(value)) {
+                    finishSet.add(value);
+                }
+            }
+            return Array.from(finishSet);
+        }
+
+        let values = ["Hare", "Krishna", "Hare", "Krishna",
+            "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+
+        alert( unique(values) ); // Hare, Krishna, :-O
+
+    /* Решение 
+
+    Понятно почему решение такое простое. 
+    Множество Set АВТОМАТИЧЕСКИ проверяет на уникальность. 
+    Нет необходимости в has и add.
+
+    function unique(arr) {
+        return Array.from(new Set(arr));
+    }
+  
+    */
+    </script>
+</body>
+</html>
