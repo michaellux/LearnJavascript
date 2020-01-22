@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Максимальная зарплата</title>
+  </head>
+  <body>
+    <script>
+      function topSalary(salaries) {
+        let maxSalary = 0;
+        let maxSalaryPerson;
+
+        if (Object.entries(salaries).length == 0) {
+          return null;
+        }
+
+        for (let [key, value] of Object.entries(salaries)) {
+          if (maxSalary <= value) {
+            maxSalary = value;
+            maxSalaryPerson = key;
+          }
+        }
+
+        console.log(maxSalary);
+        return maxSalaryPerson;
+      }
+
+      let salaries = {
+        John: 100,
+        Pete: 300,
+        Mary: 250
+      };
+
+      topSalary(salaries);
+
+      /* Решение
+
+        function topSalary(salaries) {
+        
+            let max = 0;
+            let maxName = null;
+        
+            for(const [name, salary] of Object.entries(salaries)) {
+                if (max < salary) {
+                    max = salary;
+                    maxName = name;
+                }
+            }
+        
+            return maxName;
+        }
+      */
+    </script>
+  </body>
+</html>
