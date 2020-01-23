@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Использование reviver</title>
+  </head>
+  <body>
+    <script>
+      let room = {
+        number: 23
+      };
+
+      let meetup = {
+        title: "Совещание",
+        occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
+        place: room
+      };
+
+      // цикличные ссылки
+      room.occupiedBy = meetup;
+      meetup.self = meetup;
+
+      alert(
+        JSON.stringify(meetup, function replacer(key, value) {
+            if(key == 'self') {
+                return undefined;
+            }
+            else if(key == 'occupiedBy') {
+                return meetup.occupiedBy;
+            }
+            else {
+                return value;
+            }
+        })
+      );
+
+      /* в результате должно быть:
+      {
+        "title":"Совещание",
+        "occupiedBy":[{"name":"Иванов"},{"name":"Петров"}],
+        "place":{"number":23}
+      }
+      */
+    </script>
+  </body>
+</html>
