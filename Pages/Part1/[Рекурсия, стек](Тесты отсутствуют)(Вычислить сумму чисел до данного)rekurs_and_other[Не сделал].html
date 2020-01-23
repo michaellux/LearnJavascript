@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Вычислить сумму чисел до данного</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      let n;
+      /*
+      function sumTo(n) {
+        let sum = n;
+        for (let i = 1; i < n; i++) {
+          sum = i + sum;
+        }
+        return sum;
+      }
+      */
+      /*
+      function sumTo(n) {
+        let sum = n;
+
+        sum += sumTo(n);
+
+        return sum;
+      }
+      */
+      function sumTo(n) {
+        let sum;
+        sum = 0;
+        sum += ((1 + n) / 2) * n;
+
+        return sum;
+      }
+
+      alert(sumTo(100));
+    </script>
+  </body>
+</html>
