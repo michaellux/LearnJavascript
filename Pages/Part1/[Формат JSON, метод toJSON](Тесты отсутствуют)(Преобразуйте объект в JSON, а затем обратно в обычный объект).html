@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Преобразуйте объект в JSON, а затем обратно в обычный объект</title>
+  </head>
+  <body>
+    <script>
+        let user = {
+            name: "Василий Иванович",
+            age: 35
+        };
+
+        userJSON = JSON.stringify(user);
+        alert(userJSON);
+
+        let userObject = JSON.parse(userJSON);
+        alert(userObject);
+
+        /* Решение
+
+        let user = {
+            name: "Василий Иванович",
+            age: 35
+        };
+
+        let user2 = JSON.parse(JSON.stringify(user));
+
+        */
+    </script>
+  </body>
+</html>
