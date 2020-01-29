@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Сортировать по полю</title>
+  </head>
+  <body>
+    <script>
+      let users = [
+        { name: "John", age: 20, surname: "Johnson" },
+        { name: "Pete", age: 18, surname: "Peterson" },
+        { name: "Ann", age: 19, surname: "Hathaway" }
+      ];
+
+      function byField(field) {
+        return (a, b) => a.field > b.field ? 1 : -1
+      }
+
+      alert(users.sort(byField('name')));
+      alert(users.sort(byField('age')));
+
+      /* Решение
+
+      let users = [
+        { name: "John", age: 20, surname: "Johnson" },
+        { name: "Pete", age: 18, surname: "Peterson" },
+        { name: "Ann", age: 19, surname: "Hathaway" }
+      ];
+
+      function byField(field) {
+        return (a, b) => a[field] > b[field] ? 1 : -1;
+      }
+
+      users.sort(byField('name'));
+      users.forEach(user => alert(user.name)); // Ann, John, Pete
+
+      users.sort(byField('age'));
+      users.forEach(user => alert(user.name)); // Pete, Ann, John
+
+      */
+    </script>
+  </body>
+</html>

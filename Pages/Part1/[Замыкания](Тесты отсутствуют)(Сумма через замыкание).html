@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Сумма с помощью замыканий</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+      function sum(a) {
+        function f(b) {
+          return a + b;
+        }
+        return f;
+      }
+      let a = parseFloat(prompt("Введите a"));
+      let b =parseFloat(prompt("Введите b"));
+
+      alert(sum(a)(b));
+
+      /* Решение
+      
+      Чтобы вторые скобки заработали, первые – должны вернуть функцию.
+
+      Вот так:
+  
+      function sum(a) {
+  
+        return function(b) {
+            return a + b; // берёт "a" из внешнего лексического окружения
+        };
+  
+      }
+  
+      alert( sum(1)(2) ); // 3
+      alert( sum(5)(-1) ); // 4
+
+      */
+    </script>
+  </body>
+</html>
