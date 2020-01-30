@@ -41,6 +41,25 @@
       counter.decrease(); // уменьшить значение счётчика на 1
 
       alert(counter()); // 10 (вместо 11)
+
+      /* Решение
+
+      В решении использована локальная переменная count, а методы сложения записаны прямо в counter. Они разделяют одно и то же лексическое окружение и также имеют доступ к текущей переменной count.
+
+      function makeCounter() {
+        let count = 0;
+      
+        function counter() {
+          return count++;
+        }
+      
+        counter.set = value => count = value;
+      
+        counter.decrease = () => count--;
+      
+        return counter;
+      }
+      */
     </script>
   </body>
 </html>
