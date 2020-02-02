@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Декоратор debounce</title>
+</head>
+<body>
+    <script>
+        function debounce(f, ms) {
+            return function(x) {
+                
+            }
+        }
+
+        let f = debounce(alert, 1000);
+
+        f(1); // выполняется немедленно
+        f(2); // проигнорирован
+
+        setTimeout( () => f(3), 100); // проигнорирован (прошло только 100 мс)
+        setTimeout( () => f(4), 1100); // выполняется
+        setTimeout( () => f(5), 1500); // проигнорирован (прошло только 400 мс от последнего вызова)
+    </script>
+</body>
+</html>
