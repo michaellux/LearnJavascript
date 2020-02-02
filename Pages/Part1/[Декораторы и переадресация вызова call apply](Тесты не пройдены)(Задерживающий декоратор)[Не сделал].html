@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Задерживающий декоратор</title>
+  </head>
+  <body>
+    <script>
+      function f(x) {
+        alert(x);
+      }
+
+      function delay(f, ms) {
+        let cache = new Map();
+
+        let result = setTimeout(function() {
+          return function() {
+            let key = hash(arguments);
+            if (cache.has(key)) {
+              return cache.get(key);
+            }
+            let result = func.call(this, ...arguments);
+            cache.set(key, result);
+          };
+        }, ms);
+
+        return result;
+      }
+
+      function hash(args) {
+        return [].join.call(arguments);
+      }
+
+      // создаём обёртки
+      let f1000 = delay(f, 1000);
+      let f1500 = delay(f, 1500);
+
+      f1000("test"); // показывает "test" после 1000 мс
+      f1500("test"); // показывает "test" после 1500 мс
+    </script>
+  </body>
+</html>
