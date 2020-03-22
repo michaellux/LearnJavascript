@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Добавить функциям метод "f.defer(ms)"</title>
+  </head>
+  <body>
+    <script>
+      function f() {
+        alert("Hello!");
+      }
+
+      Function.prototype.f = f();
+
+      f.defer(1000); // выведет "Hello!" через 1 секунду
+    
+    </script>
+  </body>
+</html>
