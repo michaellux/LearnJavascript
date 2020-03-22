@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Добавьте toString в словарь</title>
+  </head>
+  <body>
+    <script>
+      let dictionary = Object.create(null);
+
+      // ваш код, который добавляет метод dictionary.toString
+
+      dictionary.toString = function () {
+          return Object.getOwnPropertyNames(dictionary);
+      }
+
+      // добавляем немного данных
+      dictionary.apple = "Apple";
+      dictionary.__proto__ = "test"; // здесь __proto__ -- это обычный ключ
+
+      // только apple и __proto__ выведены в цикле
+      for (let key in dictionary) {
+        alert(key); // "apple", затем "__proto__"
+      }
+
+      // ваш метод toString в действии
+      alert(dictionary); // "apple,__proto__"
+    </script>
+  </body>
+</html>
